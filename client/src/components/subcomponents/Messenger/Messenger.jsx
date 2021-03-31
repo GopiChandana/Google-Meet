@@ -7,7 +7,7 @@ import {
   faCommentAlt,
   faPaperPlane,
 } from "@fortawesome/free-solid-svg-icons";
-//  import { formatDate } from "./../../../utils/helpers";
+  import { formatDate } from "./../../../utils/helpers";
 
 const Messenger = ({ setIsMessenger, sendMsg, messageList }) => {
   const [msg, setMsg] = useState("");
@@ -53,14 +53,14 @@ const Messenger = ({ setIsMessenger, sendMsg, messageList }) => {
       </div>
 
       <div className="chat_section">
-        {/* {messageList.map((item) => (
+        {messageList.map((item) => (
           <div key={item.time} className="chat_block">
             <div className="sender">
-              {item.user} <small>10pm</small>
+              {item.user} <small>{formatDate(item.time)}</small>
             </div>
             <p className="msg">{item.msg}</p>
           </div>
-        ))} */}
+        ))}
       </div>
 
       <div className="send_msg_section">

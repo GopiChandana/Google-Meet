@@ -1,8 +1,16 @@
 import "./HomePage.scss";
+import shortid from "shortid";
+import { useHistory } from "react-router-dom";
 import Header from "../subcomponents/Header/Header";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faVideo, faKeyboard } from "@fortawesome/free-solid-svg-icons";
 const HomePage = () => {
+  const history = useHistory();
+  
+  const startCall = ()=>{
+    const uid = shortid.generate();
+    history.push(`/${uid}#init`);
+  }
   return (
     <div className="homepage">
       <Header />
@@ -15,7 +23,7 @@ const HomePage = () => {
               meetings, Google Meet, to make it free and available for all.
             </p>
             <div className="actions">
-              <button className="btn green">
+              <button className="btn green" onClick={startCall}>
                 <FontAwesomeIcon className="each_icon" icon={faVideo} />
                 New Meeting
               </button>
