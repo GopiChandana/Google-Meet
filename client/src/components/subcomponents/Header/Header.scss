@@ -1,0 +1,38 @@
+.header{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    padding:20px;
+    box-sizing:border-box;
+    .logo{
+        display:flex;
+        align-items:center;
+        width:100px;
+    }
+    img{
+        width:100%;
+    }
+    .meet{
+        font-size:18px;
+        font-weight: 500;
+        display:flex;
+        position:relative;
+        top:-1.5px;
+        vertical-align: middle;
+        align-items: center;
+        justify-content: center;
+         padding-left:4px;
+        color:#5f6368;
+    }
+    .icons_block{
+        display:flex;
+        align-items:center;
+        justify-content: space-around;
+        .each_icon{
+            font-size:20px;
+            padding:10px;
+            color:#5f6368
+        }
+    }
+
+}

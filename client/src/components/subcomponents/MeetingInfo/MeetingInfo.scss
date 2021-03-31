@@ -1,0 +1,90 @@
+.meeting_info_block {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 25px;
+  width: 310px;
+  .meeting_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #222;
+    h3 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 400;
+    }
+    .icon {
+      cursor: pointer;
+      font-size: 20px;
+    }
+  }
+  .add_people_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #04796a;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+
+    margin-top: 20px;
+    .icon {
+      font-size: 12px;
+      margin-right: 10px;
+    }
+  }
+  .info_text {
+    color: #222;
+    font-size: 14px;
+  }
+  .meet_link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f1f3f5;
+    padding: 15px;
+    border-radius: 5px;
+    span {
+      font-size: 14px;
+      font-weight: 600;
+
+      outline: none;
+
+      flex: 1;
+      color: #555555;
+    }
+    .icon {
+      cursor: pointer;
+      color: #555555;
+    }
+  }
+  .permission_text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .icon {
+      color: #4385f4;
+      font-size: 20px;
+      margin-right: 10px;
+    }
+  }
+  .small_text {
+    font-size: 13px;
+    color: #222222;
+  }
+}
+@media screen and (max-width: 700px){
+    .meeting_info_block{
+        position:absolute;
+        margin-top: 30px;
+        width:250px;
+        top:100;
+       
+        
+    }
+}
