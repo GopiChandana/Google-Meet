@@ -130,9 +130,7 @@ const CallPage = ()=>{
   
             if ("srcObject" in video) {
               video.srcObject = stream;
-            } else {
-              video.src = window.URL.createObjectURL(stream); // for older browsers
-            }
+            } 
   
             video.play();
           });
@@ -199,7 +197,7 @@ const CallPage = ()=>{
   
     return(
         <div className="callpage_container">
-        <video className="video_container" src="" controls autoPlay playsInline muted></video>
+        <video className="video_container" src="" controls autoPlay playsInline></video>
         
         <CallPageHeader
         isMessenger={isMessenger}

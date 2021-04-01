@@ -5,8 +5,8 @@ exports.saveCallId = async (req, res) => {
     const { id, signalData } = req.body;
     await saveCallId(id, signalData);
     res.status(200).send(true);
-  } catch (err) {
-    res.status(400).send(err.message);
+  } catch (ex) {
+    res.status(400).send(ex.message);
   }
 };
 
@@ -14,8 +14,8 @@ exports.getCallId = async (req, res) => {
   try {
     const { id } = req.params;
     const code = await getCallId(id);
-    res.status(200).json({ code });
-  } catch (err) {
-    res.status(400).send(err.message);
+    res.status(200).send({ code });
+  } catch (ex) {
+    res.status(400).send(ex.message);
   }
 };
